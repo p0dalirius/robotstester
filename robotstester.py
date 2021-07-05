@@ -230,7 +230,7 @@ def json_export(results, json_file):
     f.close()
 
 def main(options, logger, console):
-    logger.info("Starting HTTP verb enumerating and tampering")
+    logger.info("Enumerating URLs from robots.txt")
     results = {}
     # Verifying the proxy option
     if options.proxy:
