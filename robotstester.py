@@ -95,7 +95,7 @@ def get_options():
         formatter_class=argparse.RawTextHelpFormatter,
     )
 
-    group = parser.add_mutually_exclusive_group()
+    group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument(
         "-u",
         "--url",
