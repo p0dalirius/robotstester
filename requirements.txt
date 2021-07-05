@@ -1,0 +1,4 @@
+setuptools
+requests
+urllib3
+rich
