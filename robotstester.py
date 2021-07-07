@@ -13,6 +13,7 @@ from rich import box
 from rich.table import Table
 import argparse
 import json
+import os
 import re
 import requests
 import sys
