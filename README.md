@@ -23,9 +23,9 @@ robotstester -u http://www.example.com/
 You can find here a complete list of options :
 
 ```
-[~] Robots.txt tester, v1.0
+[~] Robots.txt tester, v1.2.0
 
-usage: robotstester.py [-h] [-u URL | -f URLSFILE] [-v] [-q] [-k] [-L] [-t THREADS] [-j JSONFILE] [-x PROXY] [-b COOKIES]
+usage: robotstester.py [-h] (-u URL | -f URLSFILE) [-v] [-q] [-k] [-L] [-t THREADS] [-p] [-j JSONFILE] [-x PROXY] [-b COOKIES]
 
 This Python script can enumerate all URLs present in robots.txt files, and test whether they can be accessed or not.
 
@@ -40,6 +40,7 @@ optional arguments:
   -L, --location        Follow redirects (default: False)
   -t THREADS, --threads THREADS
                         Number of threads (default: 5)
+  -p, --parsable        Parsable output
   -j JSONFILE, --jsonfile JSONFILE
                         Save results to specified JSON file.
   -x PROXY, --proxy PROXY
