@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# File name          :
-# Author             :
-# Date created       :
-# Date last modified :
-# Python Version     : 3.*
 
 from concurrent.futures import ThreadPoolExecutor
 from http.cookies import SimpleCookie
@@ -13,12 +8,11 @@ from rich import box
 from rich.table import Table
 import argparse
 import json
-import os
 import re
 import requests
 import sys
 
-banner = "[~] Robots.txt tester, v1.0\n"
+banner = "[~] Robots.txt tester, v1.2.0\n"
 
 class Logger(object):
     def __init__(self, verbosity=0, quiet=False):
@@ -160,6 +154,14 @@ def get_options():
         help="Number of threads (default: 5)",
     )
     parser.add_argument(
+        "-p",
+        "--parsable",
+        dest="parsable",
+        action="store_true",
+        required=False,
+        help="Parsable output",
+    )
+    parser.add_argument(
         "-j",
         "--jsonfile",
         dest="jsonfile",
@@ -286,7 +288,10 @@ def main(options, logger, console):
         results = {key: results[key] for key in sorted(results)}
 
         # Parsing and print results
-        print_results(console, results)
+        if options.parsable == True:
+            print(results)
+        else:        
+            print_results(console, results)
 
         # Export to JSON if specified
         if options.jsonfile is not None:
@@ -294,8 +299,11 @@ def main(options, logger, console):
 
 if __name__ == '__main__':
     try:
-        print(banner)
         options = get_options()
+        if options.parsable == True:
+            options.quiet = True
+        else:
+            print(banner)
         logger = Logger(options.verbosity, options.quiet)
         console = Console()
         if not options.verify:
