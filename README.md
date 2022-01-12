@@ -1,5 +1,11 @@
 # Robots.txt tester
 
+<p align="center">
+  <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/p0dalirius/robotstester">
+  <a href="https://twitter.com/intent/follow?screen_name=podalirius_" title="Follow"><img src="https://img.shields.io/twitter/follow/podalirius_?label=Podalirius&style=social"></a>
+  <br>
+</p>
+
 With this script, you can enumerate all URLs present in robots.txt files, and test whether you can access them or not.
 
 ![example](assets/example.gif)
