@@ -1,4 +1,4 @@
-# Robots.txt tester
+![](./.github/banner.png)
 
 <p align="center">
   <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/p0dalirius/robotstester">
@@ -9,7 +9,7 @@
 
 With this script, you can enumerate all URLs present in robots.txt files, and test whether you can access them or not.
 
-![example](assets/example.gif)
+![](./.github/example.gif)
 
 ## Setup
 
